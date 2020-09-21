@@ -1,31 +1,38 @@
 import React,{useCallback, useState} from 'react'
 import Dropzone,{useDropzone} from 'react-dropzone'
-import { Loader } from './child/Loader';
+import { Loader } from './child/Loader'
 
 const Fileupload = (props) => {
   const [isLoad,setIsLoad] = useState(false);
+  const [file,setFile] = useState([]);
+
   const onDrop = useCallback(acceptedFiles => {
-    console.log("accepted files :-",acceptedFiles);
+    file.push(acceptedFiles[0])
+    setFile(file)
+  }, [])
+  const submitHandler = () =>{ 
     setIsLoad(true);
     let formData = new FormData();
-    formData.append("files",acceptedFiles[0]);
+    file.forEach(item => {
+      formData.append("files",item);
+    });
     let options = {
       method:'POST',
       body:formData
     }
-    fetch(`https://localhost:44377/api/zoom/file-upload`,options)
+    fetch(`https://localhost:44377/api/emailservice/file-upload`,options)
     .then(res=>res.json())
     .then(json=>{
       console.log(json)
       setIsLoad(false)
     })
     .catch(err=>{
-      console.log(err)
+    console.log(err)
     setIsLoad(false)
-    })
-  }, [])
+    }) 
+}
   const {isDragActive,isDragReject} = useDropzone({onDrop})
-     return (
+  return (
        <>
       {isLoad?<Loader />:null} 
       <Dropzone 
@@ -48,6 +55,7 @@ const Fileupload = (props) => {
       </div>
       )}
     </Dropzone>
+    <button onClick={submitHandler}>Submit Here</button>
     </>
     //   <div {...getRootProps()}>
     //   <input {...getInputProps()} multiple={true} />

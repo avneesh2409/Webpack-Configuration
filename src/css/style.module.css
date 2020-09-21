@@ -2,6 +2,30 @@
     color:white;
     background-color: black;
 }
+.divClass{
+    margin-left: 20px;
+    overflow-x:scroll;
+    border:2px solid #ddd;
+    padding:20px;
+}
+.spanInput{
+    padding: 5px;
+    border-top-left-radius: 5px;
+    background: cornsilk;
+    border-bottom-left-radius: 5px;
+}
+.close {
+    cursor: pointer;
+    padding: 5px 5px;
+    transform: translate(0%, -50%);
+    background: wheat;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transform: translate(0%, -50%);
+  }
+  
+.close:hover {background: #bbb;}
+
 .ul{
     background: lightgrey;
     list-style-type: none;
