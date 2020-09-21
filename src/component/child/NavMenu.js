@@ -8,6 +8,7 @@ const Navmenu = (props) => {
                 <li><a href="/" >Index</a></li>
                 <li><a href="/home" >Home</a></li>
                 <li><a href="/gallery" >Gallery</a></li>
+                <li><a href="/signalr" >SignalR</a></li>
             </ul>
         </>
     )
