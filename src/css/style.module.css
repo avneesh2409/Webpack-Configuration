@@ -8,6 +8,17 @@
     border:2px solid #ddd;
     padding:20px;
 }
+.covidTable{
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: 20vh;
+    margin-top: 20vh;
+}
+.covidTable td,tr,th{
+    padding: 10px;
+    margin:10px;
+    background:#ddd;
+}
 .spanInput{
     padding: 5px;
     border-top-left-radius: 5px;
