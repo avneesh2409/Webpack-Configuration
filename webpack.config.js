@@ -57,6 +57,7 @@ var config = {
             const port = server.listeningApp.address().port;
             console.log('Listening on port:', port);
         }
-    }
+    },
+    devtool: 'source-map'
 };
 module.exports = config;
