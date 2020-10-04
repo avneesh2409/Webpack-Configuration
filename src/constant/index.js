@@ -4,3 +4,6 @@ export const REPOSITORY = "REPOSITORY";
 export const GALLERY = "GALLERY";
 export const COVID19 = "COVID19";
 export const SIGNALR = "SIGNALR";
+export const ADD_AUTHOR = "ADD_AUTHOR";
+export const ADD_BOOK = "ADD_BOOK";
+export const DISPLAY_AUTHOR_BOOK = "DISPLAY_AUTHOR_BOOK";

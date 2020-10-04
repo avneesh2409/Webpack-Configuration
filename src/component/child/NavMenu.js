@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { COVID19, GALLERY, HOME, INDEX, REPOSITORY, SIGNALR } from '../../constant'
+import { ADD_AUTHOR, ADD_BOOK, COVID19, DISPLAY_AUTHOR_BOOK, GALLERY, HOME, INDEX, REPOSITORY, SIGNALR } from '../../constant'
 import style from '../../css/style.module.css'
 
 
@@ -23,10 +23,19 @@ const Navmenu = () => {
     },{
         name:COVID19,
         path:`/${COVID19.toLowerCase()}`
+    },
+    {
+        name:ADD_AUTHOR,
+        path:`/${ADD_AUTHOR.toLowerCase()}`
+    },
+    {
+        name:ADD_BOOK,
+        path:`/${ADD_BOOK.toLowerCase()}`
+    },
+    {
+        name:DISPLAY_AUTHOR_BOOK,
+        path:`/${DISPLAY_AUTHOR_BOOK.toLowerCase()}`
     }]
-    const clickHandler = (path) =>{
-        window.history.pushState("","",path);
-    }
     return (
         <>
             <ul className={style.ul}>
@@ -37,7 +46,6 @@ const Navmenu = () => {
                         )
                     })
                 }
-                
             </ul>
         </>
     )

@@ -72,7 +72,7 @@ const Authorbook = (props) =>{
             })
             .then(res=>res.json())
             .then(json=>{
-                console.log(json)
+                alert("Successfully added"+json.message)
             })
             .catch(err=>console.log(err))
         }
